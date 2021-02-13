@@ -1,5 +1,7 @@
 Classroom Info
 <p>
-<%= @classroom.course_name %>
-<%= @classroom.semester %>
+<%= render 'classroom', classroom:@classroom%>
 </p>
+<div>
+    <%= render 'students/student', collection: @students, as: :students %>
+</div>
